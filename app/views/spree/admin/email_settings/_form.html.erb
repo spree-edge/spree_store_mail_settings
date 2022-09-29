@@ -1,0 +1,74 @@
+<% content_for :page_title do %>
+  <%= Spree.t('email_setting')%>
+<% end %>
+
+<%= form_with model: [:admin, @email_setting], :url => admin_email_settings_path do |form| %>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h5>General</h5>
+        <div>
+          <%= form.check_box :mail_delivery %>
+          <%= form.label :mail_delivery, class:'mb-2' %>
+        </div>
+
+        <div>
+          <%= form.label :email_from %><br>
+          <%= form.text_field :email_from , class:'form-control'%>
+        </div>
+
+        <div>
+          <%= form.label :email_bcc %><br>
+          <%= form.text_field :email_bcc, class:'form-control' %>
+        </div>
+
+        <div>
+          <%= form.label :intercept_email %><br>
+          <%= form.text_field :intercept_email, class:'form-control' %>
+        </div>
+      </div>
+
+      <div class="col">
+        <h5>SMTP</h5>
+        <div>
+          <%= form.label 'SMTP Mail Domain' %><br>
+          <%= form.text_field 'smtp[domain]', class:'form-control', value: @email_setting.smtp['domain'] %>
+        </div>
+
+        <div>
+          <%= form.label 'SMTP Mail Host' %><br>
+          <%= form.text_field 'smtp[address]', class:'form-control',  value: @email_setting.smtp['address'] %>
+        </div>
+
+        <div>
+          <%= form.label 'SMTP PORT' %><br>
+          <%= form.text_field 'smtp[port]', class:'form-control',  value: @email_setting.smtp['port'] %>
+        </div>
+
+        <div>
+          <%= form.label 'SECURE CONNECTION TYPE' %><br>
+          <%= form.text_field 'smtp[secure_connection_type]', class:'form-control',  value: @email_setting.smtp['secure_connection_type'] %>
+        </div>
+
+        <div>
+          <%= form.label 'SMTP AUTHENTICATION TYPE' %><br>
+          <%= form.text_field 'smtp[authentication]', class:'form-control', value: @email_setting.smtp['authentication'] %>
+        </div>
+
+        <div>
+          <%= form.label 'SMTP USERNAME' %><br>
+          <%= form.text_field 'smtp[user_name]', class:'form-control', value: @email_setting.smtp['user_name'] %>
+        </div>
+
+        <div>
+          <%= form.label 'SMTP PASSWORD' %><br>
+          <%= form.text_field 'smtp[password]', class:'form-control', value: @email_setting.smtp['password'] %> 
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-4 d-flex justify-content-start">
+      <%= form.submit class:'btn btn-primary' %>
+    </div>
+  </div>
+<% end %>
