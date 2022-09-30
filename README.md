@@ -1,6 +1,12 @@
 # SpreeStoreMailSettings
 
-Introduction goes here.
+Spree store mail settings gem will hep you easily add store specific SMTP mail settings in your application. 
+
+## Key features
+
+  - It includes ability to set store specific SMTP configuration from admin panel.
+  - Easy to add more SMTP attributes to the mail setting table.
+  - It uses spree_emails to send emails on different tiggers. For ex: On order completion, shipment shipped, order cancellation, plus we can add more triggers easily.
 
 ## Installation
 
@@ -25,6 +31,13 @@ Introduction goes here.
 4. Restart your server
 
   If your server was running, restart it so that it can find the assets properly.
+  
+## Demo
+
+
+https://user-images.githubusercontent.com/80153749/193229440-97258378-6ccc-4e0d-864c-50b2a5017beb.mp4
+
+
 
 ## Testing
 
