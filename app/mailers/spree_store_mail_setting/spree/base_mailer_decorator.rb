@@ -1,4 +1,4 @@
-module AxelSpree
+module SpreeStoreMailSetting
   module Spree
     module BaseMailerDecorator
 
@@ -26,4 +26,4 @@ module AxelSpree
   end
 end
 
-Spree::BaseMailer.prepend AxelSpree::Spree::BaseMailerDecorator
+Spree::BaseMailer.prepend SpreeStoreMailSetting::Spree::BaseMailerDecorator
