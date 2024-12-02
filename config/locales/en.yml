@@ -3,3 +3,9 @@
 
 en:
   hello: "Hello world"
+  spree:
+    email_settings: "Email Settings"
+    send_test_mail: "Send Test Mail"
+    mail_test:
+      success: "Test mail delivered successfully"
+      error: "Test mail is not delivered"

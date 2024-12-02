@@ -1,4 +1,4 @@
-module SpreeStoreMailSetting
+module SpreeStoreMailSettings
   module Spree
     module BaseMailerDecorator
 
@@ -26,4 +26,4 @@ module SpreeStoreMailSetting
   end
 end
 
-Spree::BaseMailer.prepend SpreeStoreMailSetting::Spree::BaseMailerDecorator
+Spree::BaseMailer.prepend SpreeStoreMailSettings::Spree::BaseMailerDecorator
