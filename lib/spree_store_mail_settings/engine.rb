@@ -9,7 +9,7 @@ module SpreeStoreMailSettings
       g.test_framework :rspec
     end
 
-    initializer 'spree_store_mail_settings.environment', before: :load_config_initializers do |_app|
+    config.after_initialize do |_app|
       SpreeStoreMailSettings::Config = SpreeStoreMailSettings::Configuration.new
     end
 
